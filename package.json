@@ -1,7 +1,7 @@
 {
   "name": "multiple_language",
   "version": "1.0.1",
-  "description": "",
+  "description": "Multiple language by Tùng Duy",
   "main": "index.js",
   "scripts": {
     "test": "npm run build && nodemon examples/server.js",
@@ -10,7 +10,22 @@
     "build": "npm run clean && babel src --out-dir dist"
   },
   "author": "Tùng Duy <tungduy.dev@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tung-duy/multi-language.git"
+  },
+  "keywords": [
+    "tungduy",
+    "multi language",
+    "multiple-language",
+    "helper",
+    "Helper for backend",
+    "javascript",
+    "multilingual",
+    "multi",
+    "language"
+  ],
   "dependencies": {
     "@babel/polyfill": "^7.11.5",
     "express": "^4.17.1",
