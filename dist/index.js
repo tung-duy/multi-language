@@ -6,10 +6,18 @@ Object.defineProperty(exports, "__esModule", {
 Object.defineProperty(exports, "multiLanguageBe", {
   enumerable: true,
   get: function get() {
-    return _backend.default;
+    return _multiLanguage.default;
+  }
+});
+Object.defineProperty(exports, "setLanguageBe", {
+  enumerable: true,
+  get: function get() {
+    return _setLanguage.default;
   }
 });
 
-var _backend = _interopRequireDefault(require("./backend"));
+var _multiLanguage = _interopRequireDefault(require("./backend/multiLanguage"));
+
+var _setLanguage = _interopRequireDefault(require("./backend/setLanguage"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

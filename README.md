@@ -54,15 +54,24 @@ The exported multiLanguageBe function takes two parameters. The first parameter 
 By default if option is empty the package will find a directory called `locales`. This directory is on par with the `index.js` or `server.js`.
 If you want to change the path you can change the new path for this parameter.
 
+If you use the `Content-Language` variable to store the language value in the request's header. You can use `setLanguageBe` function as a middleware to automatically set the language for your other request.
+
+The exported `setLanguageBe` function gets its value fro the default variable `Content-Language`.
+
+If `setLanguageBe` function is used, then `Content-Language` variable is indispensable in each request.
+
+<img src="https://dev.fpt.work/images/5f462dc2c93e380007768cef/5f462dc291324d0007016f36/content-language.png">
+
 ##### Example
 
 ```js
   const express = require('express');
   const app = express();
   ...
-  const { multiLanguageBe } = require("multiple_language");
+  const { multiLanguageBe, setLanguageBe } = require("multiple_language");
   const pathName = __dirname + '/folder'
   multiLanguageBe(app, pathName);
+  app.use(setLanguageBe); // Get the value from variable "Content-Language" in the request's header
   ...
 ```
 

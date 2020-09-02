@@ -1,5 +1,7 @@
-import multiLanguageBe from './backend';
+import multiLanguageBe from './backend/multiLanguage';
+import setLanguageBe from './backend/setLanguage';
 
 export {
-  multiLanguageBe
+  multiLanguageBe,
+  setLanguageBe
 }
