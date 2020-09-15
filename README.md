@@ -73,6 +73,12 @@ If `setLanguageBe` function is used, then `Content-Language` variable is indispe
   multiLanguageBe(app, pathName);
   app.use(setLanguageBe); // Get the value from variable "Content-Language" in the request's header
   ...
+
+  app.get('/', (req, res) => {
+    req.i18n.changeLanguage('vi'); // If you use setLanguageBe function, you can ignore this code
+    res.json({ message: req.t("test") });
+  });
+  
 ```
 
 ## Authors and acknowledgment
